@@ -7,6 +7,7 @@
     "build": "tsc",
     "docs": "typedoc",
     "test": "vitest run",
+    "start": "node dist/index.js",
     "prettier": "npx prettier --write src/** tests/**/*.ts src/*.ts",
     "eslint": "npx eslint src/**/*.ts",
     "documentation": "npx http-server ./docs -o",
@@ -26,6 +27,9 @@
   "homepage": "https://github.com/ULL-ESIT-INF-DSI-2425/prct10-express-funko-app-alu0101433943#readme",
   "devDependencies": {
     "@eslint/js": "^9.24.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/yargs": "^17.0.33",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-tsdoc": "^0.4.0",
@@ -35,5 +39,9 @@
     "typedoc": "^0.28.2",
     "typescript-eslint": "^8.29.1",
     "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "yargs": "^17.7.2"
   }
 }
