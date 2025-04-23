@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "Funko Ejemplo",
+  "description": "Una descripción del Funko",
+  "type": "Pop!",
+  "genre": "Animación",
+  "franchise": "Some Franchise",
+  "number": 42,
+  "exclusive": true,
+  "specialFeatures": "Brilla en la oscuridad",
+  "marketValue": 100
+}

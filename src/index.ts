@@ -1,4 +1,3 @@
-// src/index.ts
 import app from "./server/server.js";
 
 const PORT = process.env.PORT || 3000;

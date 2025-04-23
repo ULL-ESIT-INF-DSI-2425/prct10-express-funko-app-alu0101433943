@@ -1,0 +1,12 @@
+{
+  "id": 9,
+  "name": "Batman",
+  "description": "Superhéroe de Gotham",
+  "type": "Pop! Heroes",
+  "genre": "Animación",
+  "franchise": "DC Comics",
+  "number": 144,
+  "exclusive": true,
+  "specialFeatures": "Brilla en la oscuridad",
+  "marketValue": 25
+}

@@ -1,13 +1,9 @@
-// src/routes/funkos.ts
 import { Router, Request, Response } from "express";
 import { FunkoPop } from "../models/funko.js";
-import { ResponseType } from "../models/response.js";
 import { FileManager } from "../services/fileManager.js";
 
 const router = Router();
 
-// GET /funkos
-// Si se envía "id" en query, devuelve un Funko concreto; de lo contrario, lista todos los Funkos del usuario.
 router.get("/", async (req: Request, res: Response): Promise<void> => {
   const user = req.query.user as string;
   if (!user) {
@@ -30,8 +26,6 @@ router.get("/", async (req: Request, res: Response): Promise<void> => {
   res.json({ success: true, funkoPops });
 });
 
-// POST /funkos
-// Añade un nuevo Funko a la lista de un usuario. Se espera que "user" se envíe en la query y los datos del Funko en el body.
 router.post("/", async (req: Request, res: Response): Promise<void> => {
   const user = req.query.user as string;
   const funko: FunkoPop = req.body;
@@ -50,9 +44,6 @@ router.post("/", async (req: Request, res: Response): Promise<void> => {
   res.status(201).json({ success: true, message: "Funko añadido con éxito" });
 });
 
-// DELETE /funkos
-// Elimina un Funko de la lista de un usuario.
-// Se esperan "user" e "id" en la query.
 router.delete("/", async (req: Request, res: Response): Promise<void> => {
   const user = req.query.user as string;
   const id = Number(req.query.id);
@@ -69,8 +60,6 @@ router.delete("/", async (req: Request, res: Response): Promise<void> => {
   res.json({ success: true, message: "Funko eliminado con éxito" });
 });
 
-// PATCH /funkos
-// Modifica un Funko existente. Se espera "user" en la query y, en el body, los datos a actualizar (incluyendo el id)
 router.patch("/", async (req: Request, res: Response): Promise<void> => {
   const user = req.query.user as string;
   const updatedFunko: FunkoPop = req.body;
